@@ -1,0 +1,101 @@
+<div class="main-content">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-header" data-background-color="red">
+                    <h4 class="title">Nova Lista de Email</h4>
+                    <p class="category">Complete your profile</p>
+                </div>
+                <div class="card-content">
+                    <form>
+                    
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group form-black label-floating is-empty">
+                                    <label class="control-label">Nome da Lista</label>
+                                    <input type="text" class="form-control" >
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group form-black label-floating is-empty">
+                                    <label class="control-label">Descrição da Lista</label>
+                                    <input type="text" class="form-control" >
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-danger pull-right">Salvar Lista</button>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="card">
+                <div class="card-header" data-background-color="red">
+                    <h4 class="title">Emails da Sua Lista</h4>
+                    
+                </div>
+                <div class="card-content">
+                    
+                         <div class="row">
+                            <div class="col-md-5">
+                                <div class="form-group form-black label-floating is-empty">
+                                    <label class="control-label">Nome</label>
+                                    <input type="text" class="form-control" >
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group form-black label-floating is-empty">
+                                    <label class="control-label">E-mail</label>
+                                    <input type="text" class="form-control" >
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group form-black label-floating is-empty">
+                                    <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                                          <i class="material-icons">add</i><div class="ripple-container"></div>
+                                     </button>
+                                
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                 <table class="table">
+                            <thead class="text-danger">
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>E-mail</th>
+                                    <th>Remover </th>                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr > 
+                                    {{listaEmail.emails[0].name}}
+                                    
+                                    
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+                            </div>
+                            </div>
+                        </div>
+
+                         <li *ngFor="let item of listaEmail.emails" >{{item.name}}</li> 
+                        <div class="clearfix"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
